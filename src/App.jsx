@@ -18,11 +18,11 @@ function App() {
   return (
     <Choose>
       <When condition={fontsLoaded}>
-        <AppLoading />
-      </When>
-      <Otherwise>
         <Routes />
         <StatusBar style="light" />
+      </When>
+      <Otherwise>
+        <AppLoading />
       </Otherwise>
     </Choose>
   )
