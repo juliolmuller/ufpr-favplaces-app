@@ -6,6 +6,7 @@
   "author": "Julio L. Muller",
   "main": "src/main.js",
   "scripts": {
+    "server": "node server.js",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",

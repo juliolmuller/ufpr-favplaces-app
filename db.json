@@ -1,0 +1,44 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "name": "Jardim Botânico",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id neque id nulla molestie vestibulum. Nulla facilisi. Aliquam in purus facilisis, consectetur erat quis, aliquam eros. Duis scelerisque vel lectus in malesuada. Mauris tristique ornare est, nec fermentum lacus rhoncus ut.",
+      "latitude": -25.44299132466502,
+      "longitude": -49.23817651084607,
+      "photos": []
+    },
+    {
+      "id": 2,
+      "name": "Parque Tanguá",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id neque id nulla molestie vestibulum. Nulla facilisi. Aliquam in purus facilisis, consectetur erat quis, aliquam eros. Duis scelerisque vel lectus in malesuada. Mauris tristique ornare est, nec fermentum lacus rhoncus ut.",
+      "latitude": -25.37900860891827,
+      "longitude": -49.283261534842666,
+      "photos": []
+    },
+    {
+      "id": 3,
+      "name": "Shopping Estação",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id neque id nulla molestie vestibulum. Nulla facilisi. Aliquam in purus facilisis, consectetur erat quis, aliquam eros. Duis scelerisque vel lectus in malesuada. Mauris tristique ornare est, nec fermentum lacus rhoncus ut.",
+      "latitude": -25.438307568974178,
+      "longitude": -49.26721444255896,
+      "photos": []
+    },
+    {
+      "id": 4,
+      "name": "Shopping Palladium",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id neque id nulla molestie vestibulum. Nulla facilisi. Aliquam in purus facilisis, consectetur erat quis, aliquam eros. Duis scelerisque vel lectus in malesuada. Mauris tristique ornare est, nec fermentum lacus rhoncus ut.",
+      "latitude": -25.47785989060764,
+      "longitude": -49.29107707991664,
+      "photos": []
+    },
+    {
+      "id": 5,
+      "name": "Parque Barigui",
+      "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id neque id nulla molestie vestibulum. Nulla facilisi. Aliquam in purus facilisis, consectetur erat quis, aliquam eros. Duis scelerisque vel lectus in malesuada. Mauris tristique ornare est, nec fermentum lacus rhoncus ut.",
+      "latitude": -25.429533819307586,
+      "longitude": -49.31134899359965,
+      "photos": []
+    }
+  ]
+}
