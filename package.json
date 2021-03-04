@@ -13,8 +13,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@expo-google-fonts/nunito": "^0.1.0",
-    "@react-native-community/masked-view": "0.1.10",
+    "@expo-google-fonts/exo-2": "^0.1.0",
     "@react-navigation/native": "^5.9.2",
     "@react-navigation/stack": "^5.14.2",
     "axios": "~0.21.1",
@@ -23,16 +22,16 @@
     "expo-font": "~8.4.0",
     "expo-status-bar": "~1.0.3",
     "json-server": "~0.16.3",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
     "react-native-gesture-handler": "~1.8.0",
     "react-native-maps": "0.27.1",
     "react-native-screens": "~2.15.2",
-    "react-native-web": "^0.15.0"
+    "react-native-web": "~0.13.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.17",
+    "@babel/core": "~7.9.0",
     "@lacussoft/eslint-config": "^1.0.1",
     "babel-eslint": "^10.1.0",
     "babel-plugin-jsx-control-statements": "^4.1.0",
