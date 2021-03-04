@@ -1,20 +1,21 @@
 import { StyleSheet } from 'react-native'
+import * as theme from '../../../theme'
 
 export default StyleSheet.create({
   container: {
     padding: 24,
     paddingTop: 44,
-    backgroundColor: '#f9fafc',
+    backgroundColor: theme.color.white,
     borderBottomWidth: 1,
-    borderColor: '#dde3f0',
+    borderColor: theme.color.whitish,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
 
   title: {
-    color: '#8fa7b3',
-    fontFamily: 'Nunito600',
+    color: theme.color.font,
+    fontFamily: theme.font.semiBold,
     fontSize: 16,
   },
 })
