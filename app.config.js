@@ -8,9 +8,9 @@ export default {
     orientation: 'portrait',
     icon: './src/assets/icon.png',
     splash: {
+      backgroundColor: '#15c3d6',
       image: './src/assets/splash.png',
       resizeMode: 'cover',
-      backgroundColor: '#ffffff',
     },
     updates: {
       fallbackToCacheTimeout: 0,
@@ -20,8 +20,8 @@ export default {
     ],
     android: {
       adaptiveIcon: {
-        foregroundImage: './src/assets/adaptive-icon.png',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#15c3d6',
+        foregroundImage: './src/assets/icon.png',
       },
     },
     ios: {
