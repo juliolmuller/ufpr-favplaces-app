@@ -2,11 +2,23 @@ import React from 'react'
 import { Text, View } from 'react-native'
 import { Feather } from '@expo/vector-icons'
 import { BorderlessButton } from 'react-native-gesture-handler'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useRoute } from '@react-navigation/native'
+import { usePlacesApi } from '../../../hooks'
 import styles from './styles'
 
-function TheHeader({ title, cancelBtn }) {
+function TheHeader({ title, deleteBtn, editBtn }) {
   const { goBack, navigate } = useNavigation()
+  const { deletePlace } = usePlacesApi()
+  const place = useRoute().params
+
+  function handleDelete() {
+    deletePlace(place.id)
+    navigate('PlacesMap')
+  }
+
+  function handleEdit() {
+    navigate('PlaceForm', place)
+  }
 
   return (
     <View style={styles.container}>
@@ -19,9 +31,14 @@ function TheHeader({ title, cancelBtn }) {
       </Text>
 
       <Choose>
-        <When condition={cancelBtn}>
-          <BorderlessButton onPress={() => navigate('OrphanagesMap')}>
-            <Feather name="x" size={24} color="#ff669d" />
+        <When condition={place?.id && deleteBtn}>
+          <BorderlessButton onPress={handleDelete}>
+            <Feather name="trash-2" size={24} color="#ff669d" />
+          </BorderlessButton>
+        </When>
+        <When condition={place?.id && editBtn}>
+          <BorderlessButton onPress={handleEdit}>
+            <Feather name="edit-2" size={24} color="#15b5d6" />
           </BorderlessButton>
         </When>
         <Otherwise>

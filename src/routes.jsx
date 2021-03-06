@@ -15,12 +15,12 @@ const screenOptions = {
   },
   PlaceDetails: {
     // eslint-disable-next-line react/display-name
-    header: () => <TheHeader title="Orfanato" cancelBtn />,
+    header: () => <TheHeader title="Minha Marcação" editBtn />,
     headerShown: true,
   },
   PlaceForm: {
     // eslint-disable-next-line react/display-name
-    header: () => <TheHeader title="Dados do orfanato" />,
+    header: () => <TheHeader title="Marcação" deleteBtn />,
     headerShown: true,
   },
 }

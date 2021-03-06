@@ -17,5 +17,6 @@ export default StyleSheet.create({
     color: theme.color.font,
     fontFamily: theme.font.semiBold,
     fontSize: 16,
+    textTransform: 'uppercase',
   },
 })
