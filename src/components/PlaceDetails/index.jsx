@@ -30,8 +30,10 @@ function PlaceDetails() {
       </If>
 
       <View style={styles.detailsContainer}>
-        <If condition={place.about}>
+        <If condition={place.name}>
           <Text style={styles.title}>{place.name}</Text>
+        </If>
+        <If condition={place.about}>
           <Text style={styles.description}>{place.about}</Text>
         </If>
 
