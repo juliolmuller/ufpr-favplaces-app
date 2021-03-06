@@ -33,7 +33,7 @@ module.exports = {
   rules: {
     'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'object-curly-newline': ['error', { ImportDeclaration: { multiline: true, minProperties: 6 } }],
+    'object-curly-newline': ['error', { ImportDeclaration: { multiline: true, minProperties: 7 } }],
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-closing-bracket-location': 'error',
     'react/jsx-no-undef': ['error', { allowGlobals: true }],
