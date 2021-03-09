@@ -11,7 +11,6 @@ function PlaceForm() {
   const place = useRoute().params
   const { navigate } = useNavigation()
   const { savePlace } = usePlacesApi()
-
   const [name, setName] = useState(place.name ?? '')
   const [about, setAbout] = useState(place.about ?? '')
   const [photos, setPhotos] = useState(place.photos ?? [])
@@ -19,19 +18,14 @@ function PlaceForm() {
   async function handleBrowsePhoto() {
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync()
 
-    if (status !== 'granted') {
-      alert('Ops! Você precisa fornecer uma foto para cadastra o orfanato.')
-      return
-    }
+    if (status === 'granted') {
+      const result = await ImagePicker.launchImageLibraryAsync({
+        mediaType: ImagePicker.MediaTypeOptions.Images,
+        allowsEditing: true,
+        quality: 1,
+      })
 
-    const result = await ImagePicker.launchImageLibraryAsync({
-      mediaType: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      quality: 1,
-    })
-
-    if (!result.cancelled) {
-      setPhotos([...photos, result.uri])
+      result.cancelled || setPhotos([...photos, result.uri])
     }
   }
 
@@ -51,21 +45,21 @@ function PlaceForm() {
       <Text style={styles.label}>Nome</Text>
       <TextInput
         style={styles.input}
-        value={name}
         onChangeText={setName}
+        value={name}
       />
 
       <Text style={styles.label}>Sobre</Text>
       <TextInput
         style={[styles.input, styles.inputMulti]}
-        multiline
-        value={about}
         onChangeText={setAbout}
+        value={about}
+        multiline
       />
 
       <Text style={styles.label}>Fotos</Text>
       <View style={styles.selectedPhotosContainer}>
-        <For each="photo" index="index" of={place.photos}>
+        <For each="photo" index="index" of={photos}>
           <Image
             key={index}
             style={styles.selectedPhoto}
@@ -82,7 +76,7 @@ function PlaceForm() {
         onPress={handleFormSubmit}
         enabled={Boolean(name)}
       >
-        <Text style={styles.SubmitBtnText}>Cadastrar</Text>
+        <Text style={styles.SubmitBtnText}>Salvar</Text>
       </RectButton>
     </ScrollView>
   )

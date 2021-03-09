@@ -6,6 +6,7 @@ export default StyleSheet.create({
     color: theme.color.white,
     fontFamily: theme.font.bold,
     fontSize: 16,
+    textTransform: 'uppercase',
   },
 
   btnDisabled: {
