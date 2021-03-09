@@ -22,10 +22,14 @@ function PlaceForm() {
       const result = await ImagePicker.launchImageLibraryAsync({
         mediaType: ImagePicker.MediaTypeOptions.Images,
         allowsEditing: true,
+        base64: true,
         quality: 1,
       })
 
-      result.cancelled || setPhotos([...photos, result.uri])
+      result.cancelled || setPhotos([
+        ...photos,
+        `data:image/jpeg;base64,${result.base64}`,
+      ])
     }
   }
 
