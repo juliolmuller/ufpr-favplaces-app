@@ -17,11 +17,6 @@ function PlacesMap() {
     navigate('PlaceForm', { longitude, latitude })
   }
 
-  function handleMarkerPress(event) {
-    Object.keys(event.nativeEvent).forEach((v) => console.log(v))
-    console.log(event.nativeEvent.position)
-  }
-
   useFocusEffect(
     useCallback(() => {
       try {
@@ -54,7 +49,6 @@ function PlacesMap() {
             icon={mapMarker}
             coordinate={{ latitude: place.latitude, longitude: place.longitude }}
             calloutAnchor={{ x: 2.7, y: 0.8 }}
-            onPress={handleMarkerPress}
           >
             <Callout tooltip onPress={() => navigate('PlaceDetails', place)}>
               <View style={styles.calloutContainer}>
