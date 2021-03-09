@@ -3,8 +3,9 @@ import * as theme from '../../theme'
 
 export default StyleSheet.create({
   calloutContainer: {
-    backgroundColor: theme.color.translucid,
+    backgroundColor: theme.color.background,
     borderRadius: 16,
+    elevation: 10,
     height: 46,
     justifyContent: 'center',
     paddingHorizontal: 16,
@@ -12,7 +13,7 @@ export default StyleSheet.create({
   },
 
   calloutText: {
-    color: theme.color.primaryDark,
+    color: theme.color.font,
     fontFamily: theme.font.bold,
     fontSize: 14,
   },
