@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react'
 import { Text, View } from 'react-native'
-import { MaterialIcons } from '@expo/vector-icons'
 import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 import { useFocusEffect, useNavigation } from '@react-navigation/native'
 import * as Location from 'expo-location'
@@ -53,7 +52,7 @@ function PlacesMap() {
         showsUserLocation
         style={styles.map}
         provider={PROVIDER_GOOGLE}
-        mapPadding={{ right: 120 }}
+        mapPadding={{ bottom: 48, right: 120 }}
         onLongPress={handleMapLongPress}
         initialRegion={{
           latitude: location?.latitude ?? DEFAULT_LATITUDE,
@@ -82,7 +81,12 @@ function PlacesMap() {
         <Text style={styles.footerText}>
           {places.length} lugares marcados
         </Text>
-        <MaterialIcons name="stars" size={24} color="#fff" />
+
+        <View style={styles.instructions}>
+          <Text style={styles.instructionsText}>
+            Dê um toque longo no mapa para favoritar um lugar
+          </Text>
+        </View>
       </View>
     </View>
   )

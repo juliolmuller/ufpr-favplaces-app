@@ -23,24 +23,38 @@ export default StyleSheet.create({
   },
 
   footer: {
-    alignItems: 'center',
     backgroundColor: theme.color.primaryDark,
-    borderRadius: 20,
-    bottom: 32,
-    elevation: 3,
-    flexDirection: 'row',
-    height: 56,
-    justifyContent: 'center',
-    left: 24,
+    bottom: 0,
+    elevation: 10,
+    height: 96,
+    left: 0,
     position: 'absolute',
-    right: 24,
+    right: 0,
   },
 
   footerText: {
     color: theme.color.white,
     fontFamily: theme.color.bold,
-    fontSize: 20,
-    marginRight: 16,
+    fontSize: 18,
+    marginVertical: 8,
+    textAlign: 'center',
+  },
+
+  instructions: {
+    backgroundColor: theme.color.translucid,
+    bottom: 0,
+    left: 0,
+    position: 'absolute',
+    right: 0,
+  },
+
+  instructionsText: {
+    color: theme.color.font,
+    fontFamily: theme.font.italic,
+    fontSize: 14,
+    marginHorizontal: 32,
+    marginVertical: 8,
+    textAlign: 'center',
   },
 
   map: {
