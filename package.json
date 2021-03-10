@@ -6,6 +6,7 @@
   "author": "Julio L. Muller",
   "main": "src/main.js",
   "scripts": {
+    "postinstall": "node -e \"require('fs').existsSync('.env') || require('fs').copyFileSync('.env.example', '.env')\"",
     "server": "node server.js",
     "start": "expo start",
     "android": "expo start --android",
@@ -21,6 +22,7 @@
     "axios": "~0.21.1",
     "expo": "^40.0.1",
     "expo-app-loading": "^1.0.1",
+    "expo-constants": "~9.3.3",
     "expo-font": "~8.4.0",
     "expo-image-picker": "~9.2.0",
     "expo-location": "~10.0.0",
@@ -39,6 +41,7 @@
     "@lacussoft/eslint-config": "^1.0.1",
     "babel-eslint": "^10.1.0",
     "babel-plugin-jsx-control-statements": "^4.1.0",
+    "dotenv": "^8.2.0",
     "eslint": "^7.20.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-control-statements": "^2.2.1",

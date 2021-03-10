@@ -4,12 +4,13 @@ import { MaterialIcons } from '@expo/vector-icons'
 import MapView, { Callout, Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 import { useFocusEffect, useNavigation } from '@react-navigation/native'
 import * as Location from 'expo-location'
+import Constants from 'expo-constants'
 import { usePlacesApi } from '../../hooks'
 import mapMarker from '../../assets/map-marker.png'
 import styles from './styles'
 
-const DEFAULT_LATITUDE = -25.425
-const DEFAULT_LONGITUDE = -49.275
+const DEFAULT_LATITUDE = Number(Constants.manifest.extra.DEFAULT_LATITUDE)
+const DEFAULT_LONGITUDE = Number(Constants.manifest.extra.DEFAULT_LONGITUDE)
 
 function PlacesMap() {
   const { navigate } = useNavigation()

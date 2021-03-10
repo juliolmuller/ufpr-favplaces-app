@@ -1,4 +1,11 @@
+import dotenv from 'dotenv'
 import project from './package.json'
+
+const config = dotenv.config()
+
+if (config.error) {
+  throw config.error
+}
 
 export default {
   expo: {
@@ -12,6 +19,9 @@ export default {
       image: './src/assets/splash.png',
       resizeMode: 'cover',
     },
+    extra: {
+      ...process.env,
+    },
     updates: {
       fallbackToCacheTimeout: 0,
     },
@@ -23,6 +33,10 @@ export default {
         backgroundColor: '#15c3d6',
         foregroundImage: './src/assets/icon.png',
       },
+    },
+    androidStatusBar: {
+      backgroundColor: '#15c3d6',
+      barStyle: 'light-content',
     },
     ios: {
       supportsTablet: true,
