@@ -1,29 +1,65 @@
-Tecnologia em Análise e Desenvolvimento de Sistemas
+<h1 align="center">
+  :world_map: FavPlaces App
+</h1>
 
-Setor de Educação Profissional e Tecnológica - SEPT
+<p align="center">
+  <a href="#trophy-lessons-learned">Lessons Learned</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-technologies--resources">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#hammer-setting-up-the-environment">Environment Setup</a>
+</p>
 
-Universidade Federal do Paraná - UFPR
+<p align="center">
+  <img src="https://img.shields.io/static/v1?labelColor=000000&color=15c3d6&label=created%20at&message=Feb%202021" alt="Creation Date" />
 
----
+  <img src="https://img.shields.io/github/last-commit/juliolmuller/favplaces-app?label=updated%20at&labelColor=000000&color=15c3d6" alt="Update Date" />
 
-*DS151 - Desenvolvimento para Dispositivos Móveis*
+  <img src="https://img.shields.io/github/v/tag/juliolmuller/favplaces-app?label=latest%20version&labelColor=000000&color=15c3d6" alt="Latest Version" />
 
-Prof. Alexander Robert Kutzke
+  <img src="https://img.shields.io/static/v1?labelColor=000000&color=15c3d6&label=PRs&message=welcome" alt="Pull Requests Welcome" />
 
-* [Instruções para submissão de tarefas e trabalhos](https://gitlab.tadsufpr.net.br/ds122-alexkutzke/material/blob/master/instrucoes_submissao_tarefas_e_trabalhos.md)
-* [Video aula](https://www.youtube.com/watch?v=d6ZTnQNhoCo)
+  <img src="https://img.shields.io/github/license/juliolmuller/favplaces-app?labelColor=000000&color=15c3d6" alt="Project License" />
+</p>
 
-# Atividade Mapas
+![Application snapshot](./.github/app-overview.jpg)
 
-Crie uma aplicação com o Expo (já inicializada nesse repositório) **que se comunique um [JSON Server](https://github.com/typicode/json-server) para a persistência dos dados**.
+Application developed as an assignment to college, subject Development for Mobile Devices, at UFPR, in order to learn building **React Native** applications. The project seeks to apply knowledge in functional components, React Navigation, HTTP calls, maps and user location.
 
-A aplicação tem como objetivo a adição de pontos (`Marker`'s) no mapa. Algo como uma aplicação para a adição dos "meus locais favoritos". 
+The proposal was to build a simple mobile app that displays a map with markers of favorite places to the user. The user should be able to add new markers by long-pressing on the map and display the details by clicking on the marker afterwards. The data should be persisted in the server, so JSON Server was indicated to be used, as it is very easy to set a REST API up. The user should also be able to edit and delete the existing markers. Developing the capability to add photos to the places could grant extra points 😍.
 
-A cada clique longo no mapa o usuário deve ser levado a uma tela diferente onde preencherá dados sobre aquele ponto (título, descrição e qualquer outro dado que considerem
-relevante). Ao salvar as alterações (e persistir os dados no JSON Server), a aplicação deve voltar a tela do mapa e apresentar os markers criados.
+## :trophy: Lessons Learned
 
-Ao clicar em um marker existente, a aplicação deve ir para uma tela com detalhes daquele marker e com um opção para removê-lo.
+- Configuring React Native Maps and adding markers & its callout;
+- Browsing images from the device;
+- Granting permission to get user's location;
 
-Layout, e demais detalhes são livres. ;)
+## :rocket: Technologies & Resources
 
-Pontos extras para quem permitir a adição de imagens para um local criado.
+**Frontend:**
+- React Native
+- Expo Framework
+- React Native Mpas
+- Axios (HTTP client)
+
+**Backend:**
+- JSON Server
+
+**Development:**
+- Visual Studio Code
+- NPM routines
+
+## :hammer: Setting up the Environment
+
+Make sure to have **Node.js 10+** installed in your machine and its **npm** available in the command line, then use the following command to install dependencies:
+
+```bash
+$ npm install
+```
+
+Before starting the development server, you need to set up the environment variables in `.env` file, at the project root. If one was not created after dependencies installation process, you can use `.env.example` as reference, so you'll know all variables available in the application. The most important one is **API_URL**, which will be the URL where your JSON Server is accessible. In my case, as I was using my own device during development, I used the local network IPV4 to my computer (e.g. "192.168.15.1").
+
+At last, you can use the following commands to run the application:
+
+```bash
+$ npm run server   # run JSON Server to provide the REST API
+$ npm start        # run Expo server to execute the app
+```
